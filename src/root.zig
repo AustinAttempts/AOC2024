@@ -43,10 +43,12 @@ pub fn runSolution(
 }
 
 pub fn printSolution() !void {
-    //TODO: implement
+    try day01.solve();
 }
+
+pub const day01 = @import("puzzles/day01.zig");
 
 test {
     std.testing.refAllDecls(@This());
-    //TODO: implement
+    _ = @import("puzzles/day01.zig");
 }
