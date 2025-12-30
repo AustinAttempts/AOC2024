@@ -1,0 +1,12 @@
+.{
+    .name = .AOC2024,
+    .version = "0.0.0",
+    .fingerprint = 0x2cc04eed43c2b94e, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.15.2",
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "README.md",
+    },
+}
