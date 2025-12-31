@@ -5,10 +5,10 @@ const Solution = aoc.Solution;
 
 pub fn solve() !void {
     const input = @embedFile("../inputs/day03.txt");
-    try aoc.runSolution("Day 03", input, redNoseReports, .{});
+    try aoc.runSolution("Day 03", input, mullItOver, .{});
 }
 
-fn redNoseReports(allocator: std.mem.Allocator, input: []const u8) !Solution {
+fn mullItOver(allocator: std.mem.Allocator, input: []const u8) !Solution {
     const part1 = try parseMulInstructions(input);
 
     // Build cleaned input with do()/don't() logic
@@ -72,7 +72,7 @@ test "part 1" {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     defer _ = gpa.deinit();
     const allocator = gpa.allocator();
-    const part1 = (try redNoseReports(allocator, input)).part1.?;
+    const part1 = (try mullItOver(allocator, input)).part1.?;
     try std.testing.expectEqual(161, part1);
 }
 
@@ -81,6 +81,6 @@ test "part 2" {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     defer _ = gpa.deinit();
     const allocator = gpa.allocator();
-    const part2 = (try redNoseReports(allocator, input)).part2.?;
+    const part2 = (try mullItOver(allocator, input)).part2.?;
     try std.testing.expectEqual(48, part2);
 }
