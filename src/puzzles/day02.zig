@@ -5,7 +5,7 @@ const Solution = aoc.Solution;
 
 pub fn solve() !void {
     const input = @embedFile("../inputs/day02.txt");
-    try aoc.runSolution("Day 01", input, redNoseReports, .{});
+    try aoc.runSolution("Day 02", input, redNoseReports, .{});
 }
 
 fn redNoseReports(allocator: std.mem.Allocator, input: []const u8) !Solution {
