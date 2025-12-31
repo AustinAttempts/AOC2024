@@ -45,13 +45,16 @@ pub fn runSolution(
 pub fn printSolution() !void {
     try day01.solve();
     try day02.solve();
+    try day03.solve();
 }
 
 pub const day01 = @import("puzzles/day01.zig");
 pub const day02 = @import("puzzles/day02.zig");
+pub const day03 = @import("puzzles/day03.zig");
 
 test {
     std.testing.refAllDecls(@This());
     _ = @import("puzzles/day01.zig");
     _ = @import("puzzles/day02.zig");
+    _ = @import("puzzles/day03.zig");
 }
